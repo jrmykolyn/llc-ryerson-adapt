@@ -56,7 +56,7 @@
           <li>Atom Editor: <a href="http://atom.io">http://atom.io</a></li>
           <li>Chrome Browser: <a href="https://www.google.ca/chrome/browser/desktop/">https://www.google.ca/chrome</a></li>
           </li>
-          <li>Slides also here: <a href="http://natcooper.com/llc/ryerson-adapt/#slide1">http://natcooper.com/llc/ryerson-adapt</a></li>
+          <li>Slides also here: <a href="https://ladieslearningcode.github.io/ryerson-adapt">https://ladieslearningcode.github.io/ryerson-adapt</a></li>
         </ol>
       </div>
       <footer>
@@ -89,6 +89,19 @@
         <!-- <p class="left">Content created by <a href="http://christinatruong.com">Christina Truong</a> for <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p> -->
         <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span> arrow keys to navigate</p>
       </footer>
+    </section>
+
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #Coders' code
+
+        1. Be friendly and welcoming
+        1. Be respectful of others by choosing words and actions with care
+        1. Be mindful of how much space you take up in conversations
+        1. Ask questions
+        1. Try your best (and have fun!)
+
+      </script>
     </section>
 
     <section class="slide centered" data-markdown>
@@ -169,7 +182,7 @@
       <script type="text/template">
         #HTML & CSS
 
-        This is how the Ladies Learning Code site looks like with & without CSS!
+        This is how the Canada Learning Code site looks with & without CSS!
 
         ![](framework/img/workshop/llc-no-css.jpg)
         ![](framework/img/workshop/llc-css.jpg)
@@ -334,15 +347,16 @@
 
         Having a good text editor and learning how to use it to its full potential will help your work flow. Today, let's update the text wrapping option to make it easier to read long blocks of code and text.
 
-        Go to **Preferences** to open the customization options.
+        Go to **Preferences** to open the customization options.<br />
+        For Windows Users, go to the **File** menu and choose Settings.
 
         ![](framework/img/workshop/atom-preferences.jpg)<!-- .element: width="70%" -->
 
-        The **Settings** tab will show by default. Scroll down to **Soft Wrap** option.
+        Select the **Editor** tab in the left menu
 
         ![](framework/img/workshop/atom-settings.jpg)<!-- .element: width="70%" -->
 
-        Make sure the **Soft Wrap** option is checked.
+        Make sure the **Soft Wrap** and **Show Indent Guide** options are checked.
 
         ![](framework/img/workshop/atom-soft-wrap.jpg)<!-- .element: width="70%" -->
 
@@ -556,7 +570,7 @@
       <script type="text/template">
         #HTML5 Structural Elements
 
-        The `class` attribute is often used to differentiate blocks using the same HTML tag, to style. (More on adding styles with class later).
+        The `class` attribute is often used to differentiate blocks using the same HTML tag, which we can then use to have more control over the styles. (More on adding styles later).
 
         Using HTML5 tags, the page could be structured like this:
 
@@ -934,7 +948,7 @@
       <script type="text/template">
         #Multiple CSS Declarations
 
-        Multiple declarations can be added to one selector. Just be sure to end each declaration with a semi-colon and write them on a separate line for readability.
+        Multiple declarations can be added to one selector. Just be sure to end each declaration with a semi-colon and write each on a separate line for readability.
 
         ```
         h2 {
@@ -942,7 +956,7 @@
           font-size: 50px;
         }
         ```
-        There are many, many CSS properties. New ones are added as old ones being retired (deprecated).  It's good to have a few resources on hand.
+        There are many, many CSS properties. New ones are added as old ones are being retired (deprecated).  It's good to have a few resources on hand.
 
         ---
         ###Resources
@@ -961,7 +975,7 @@
 <textarea class="snippet" data-subject="#css-selectors">selector { /* select the paragraph */
   color: red;
 }
-selector { /* select the link */
+selector { /* select the heading 2 */
   color: blue;
 }</textarea>
       <div id="css-selectors" class="example">
@@ -1098,11 +1112,12 @@ selector { /* select the link */
         The are quite a few CSS properties for styling text.  Here's a few to discuss today. Change some values below to see what happens!
 
         <textarea class="snippet" data-subject="#css-type">color: slateblue;
-font-family: Helvetica, Arial, serif;
+font-family: Helvetica, Arial, sans-serif;
 font-weight: normal;
 font-size: 16px;
 line-height: 1.25;
-text-transform: lowercase;</textarea>
+text-transform: lowercase;
+text-align: left;</textarea>
 
         <div id="css-type" class="example">
           <p>Just some text to test out the above styles. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni repellat sunt quae fugit illum in aut sed, quis nesciunt totam veritatis, dolores alias modi fuga commodi dicta facilis, consequatur temporibus.</p>
@@ -1155,14 +1170,15 @@ text-transform: lowercase;</textarea>
         #Class Exercise: Google Fonts
 
         1. Go to [Google Fonts](http://www.google.com/fonts).
-        1. **Add to Collection** to select a font.
-        ![](framework/img/workshop/google-fonts-1.jpg)
+        1. Click the + icon in the top right of a font to add it
+        ![](framework/img/workshop/google-fonts-1.jpg)<br />
+        1. A Drawer will open up at the bottom of the screen showing which fonts you have added
+        ![](framework/img/workshop/google-fonts-1a.jpg)<br />
         1. **Review** to compare. <span class="note">(The LLC example project uses Open Sans and Bad Script.)</span>
           ![](framework/img/workshop/google-fonts-2.jpg)
-        1. Select **Use** to get the code. <span class="note">(You can change your selections in the next exercise.)</span>
-        1. Select font weights. <span class="note">The more you choose, the more it will slow down page load time.</span>
+        1. Move to the 'Customize' tab to select font weights. <span class="note">The more you choose, the more it will slow down page load time.</span>
           * The LLC project uses Open Sans Light 300, regular 400 and Bad Script normal 400.
-          * The default character set should contain what you need.
+          * The default language should contain what you need.
         1. Copy the `<link>` code snippet and add it the `<head>` of your page, before your **styles.css**, to reference the Google Font CSS.
           ```
           <head>
@@ -1185,7 +1201,7 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
         #Inheritance and Specificity
 
-        A strength of CSS is styles can be inherited from parent to child elements. Let's review the family tree structure between the elements.
+        A strength of CSS is that styles can be inherited from parent to child elements. Let's review the family tree structure between the elements.
 
         ```
         <body><!-- parent of h1 and p -->
@@ -1194,7 +1210,7 @@ text-transform: lowercase;</textarea>
         </body>
         ```
 
-        CSS properties in the `body` selector is inherited by the descendant elements. A more specific selector will override the inherited values.
+        CSS properties in the `body` selector is inherited by the descendant elements. A more specific selector will override the inherited values. In this case, <code>h1</code> is more specific because the <code>h1</code> is a child of the <code>body</code>
         ```
         body {
           color: #222222;
@@ -1431,7 +1447,7 @@ text-transform: lowercase;</textarea>
         ```
         Color reference: <!-- .element: class="note" --><span style="background:#9D6381;padding:0 5px;">#9D6381</span>
 
-        Not exactly super polished yet but it's getting there.  Your page should look similar to [answer-04.html](project/reference/answer-04.html) in your **reference** folder.
+        Not exactly super polished yet, but it's getting there!  Your page should look similar to [answer-04.html](project/reference/answer-04.html) in your **reference** folder.
       </script>
     </section>
 
@@ -1627,7 +1643,7 @@ border: 15px solid green;</textarea>
       <script type="text/template">
         #Class Exercise: Spacing
 
-        Notice the white space around the edge of the page? That's default space in the `body` element. Reset it by setting the values to 0.
+        Notice the white space around the edge of the page? That's default space in the `body` element. Reset it by setting these values to 0:
 
         ```
         body {
@@ -1722,7 +1738,7 @@ border: 15px solid green;</textarea>
         }
         ```
 
-        You can skip a level but specificity rules apply.
+        You can skip a level, but specificity rules apply.
 
         For example, `nav ul li a` would override `nav a` because it&#39;s more specific.
 
@@ -1734,7 +1750,7 @@ border: 15px solid green;</textarea>
       <script type="text/template">
         # Class Exercise: Style the header
 
-        Let's add some specific styles to the header, to set it apart from the rest of the page.  We can't use `h1` or `h2` by itself since it will select all of them on the page so use *descendant selectors* instead.
+        Let's add some specific styles to the header, to set it apart from the rest of the page.  We can't use just `h1` or `h2` by itself, because that will select all instances of those tags on the page. Let's use *descendant selectors* instead:
 
         ```xml
         <header>
@@ -1766,7 +1782,7 @@ border: 15px solid green;</textarea>
         <h1>Hi! I'm <strong>Laura Ipsum</strong>.</h1>
         <h2>I'm a digital <strong>designer</strong> and <strong>developer</strong> with a penchant for gourmet doughnuts.</h2>
         ```
-        Now it can also be used to add CSS. If you want this style to be available anytime the `<strong>` tag is used, then there's no need to use a descendant selector.
+        Now it can also be used to apply CSS. If you want this style to be available anytime the `<strong>` tag is used, then there's no need to use a descendant selector.
 
         <!-- .element: class="note" -->**Pro tip!** Make sure the strong tag is used **semantically**, not just as a hook for styling!
 
@@ -1785,9 +1801,9 @@ border: 15px solid green;</textarea>
       <script type="text/template">
         # Building a web page in blocks
 
-        When building a web page, it's best to start with the HTML structure, then add CSS styles from general styles to more specific styles.
+        When building a web page, it's best to start with the HTML structure, then write our styles starting with general styles, and then moving towards more specific styles.
 
-        But as you may have already noticed, there's no clear cut path for what to build first.  It often takes a step by step approach.
+        As you may have already noticed, there's no clear cut path for what to build first. It often takes a step by step approach.
 
         To avoid CSS specificity issues, let's go over some general advice for using the selectors covered so far.
 
@@ -1814,7 +1830,7 @@ border: 15px solid green;</textarea>
         }
         ```
 
-        **Class selectors:**  Use this to apply a style to an element that is not specific to an  HTML element, only the class.  (e.g. a portion of the page that uses the same HTML tag as another page block)
+        **Class selectors:**  Use this to apply a style to an element that is not specific to any one HTML element, only the class.  (e.g. a portion of the page that uses the same HTML tag as another page block)
 
         ```
         .about {
@@ -1892,7 +1908,7 @@ border: 15px solid green;</textarea>
       <script type="text/template">
         #Background images
 
-        So far, we've been using `background` to add colours but it can also be used to add background *images*.
+        So far, we've been using `background` to add colours, but it can also be used to add background *images*.
 
         There are two ways to declare the `background` property.
 
@@ -2000,7 +2016,7 @@ border: 15px solid green;</textarea>
       <script type="text/template">
         # Opaque background Styles
 
-        The image adds some pizzazz but now it's hard to read the text!
+        The image adds some pizzazz, but now it's hard to read the text!
 
         Remember RGB colour values?  Use this instead of hex or keyword values to set an opacity to a background colour.
 
@@ -2090,7 +2106,7 @@ border: 15px solid green;</textarea>
 
           These days, `iframes` (derived from frames) can still be used for embedding content from one HTML document inside another. This is a common technique for adding content to your site from other sites like YouTube and Instagram.
 
-          The original site maintains ownership over the content and you will see the logo and styles of the original site. If the content is removed it won’t show on your website either.
+          The original site maintains ownership over the content and you will see the logo and styles of the original site. If the content is removed, it won’t show on your website either.
 
           More about frames here: <!-- .element: class="footnote" --> [Stack Overflow](http://stackoverflow.com/questions/4263509/why-are-frames-deprecated-in-html)
       </script>
@@ -2098,20 +2114,20 @@ border: 15px solid green;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Finding Embed Code
+        ##Finding the Embed Code
 
         Many of these web services provide an embed code that you can simply copy and paste.
-        Some services will also give you some customizing options in a visual interface.
+        Some services will also give you some customization options in a visual interface.
 
         Much of the generated embed code provided by these services is just HTML!
-        Sometimes, you can edit or delete some of the generated coded to make basic changes as well.
+        Sometimes, you can edit or delete some of the generated code to make basic changes.
 
-        To manipulate the raw data, most APIs will provide further documentation for how to access the data and will usually require JavaSript, PHP or other programming languages.
+        To manipulate the raw data, most APIs will provide further documentation for how to access the data and will usually require JavaScript, PHP or other programming languages.
 
         <br>
-        First, let&#39;s go over where to find the basic generated embed code for many of your favorite social network such as [YouTube](slides.html#youtube), [Vimeo](slides.html#vimeo), [Google Maps](slides.html#googlemaps), [Instagram](slides.html#instagram) and [Twitter](slides.html#twitter).
+        First, let&#39;s go over where to find the basic generated embed code for many of your favorite social network such as [YouTube](index.html#youtube), [Vimeo](index.html#vimeo), [Google Maps](index.html#googlemaps), [Instagram](index.html#instagram) and [Twitter](index.html#twitter).
 
-        **For the following examples, you can either add the content into your project files or use a blank test page located in today&#39;s downloaded files, named [test.html](test.html).**
+        **For the following examples, you can either add the content into your project files, or use a blank test page located in today&#39;s downloaded files, named [test.html](test.html).**
       </script>
     </section>
 
@@ -2123,7 +2139,7 @@ border: 15px solid green;</textarea>
 
         Source: <!-- .element: class="footnote" -->https://www.youtube.com/watch?v=vwji6HiXWCs
 
-        ![](framework/img/workshop/youtube.jpg) <!-- .element: width="700" -->
+        ![](framework/img/workshop/youtube.jpg)
     </script>
     </section>
 
@@ -2131,9 +2147,9 @@ border: 15px solid green;</textarea>
       <script type="text/template">
         ##YouTube: Customizations
 
-        In the **Embed** tab, select "show more" to see additional options for video size, controls and other actions.
+        After clicking **Embed** tab, scroll passed "embed options" to see show player controls and other actions.
 
-        ![](framework/img/workshop/youtube-options.png)
+        ![](framework/img/workshop/youtube2.jpg)
 
         Selecting different options will update your embed code.
 
@@ -2198,20 +2214,20 @@ border: 15px solid green;</textarea>
       <script type="text/template">
           ##Embedding with Scripts
 
-          The previous embed examples used the `<iframe>` tag for embedding content.  These next examples uses JavaScript instead.  A "gotcha" when using scripts is if you're testing your web page *locally* (with no server, on your computer), then often the scripts won't work without a little tweak.
+          The previous embed examples used the `<iframe>` tag for embedding content. These next examples use JavaScript instead.  A "gotcha" moment may arise when using scripts if you're testing your web page *locally* (with no server, on your computer). Often the scripts won't work without a little tweak.
 
           Take a look at the example below from Twitter, especially the last line:
 
           ![](framework/img/workshop/embed-script.jpg)
 
-          To get the embed to show *locally*, add `http:` before the url in the `src` attribute:
+          To get the embed to show *locally*, add `https:` (this is called the protocol) before the url in the `src` attribute:
 
           ```
           src="//platform.twitter.com/widgets.js"
           ```
 
           ```
-          src="http://platform.twitter.com/widgets.js"
+          src="https://platform.twitter.com/widgets.js"
           ```
       </script>
     </section>
@@ -2246,11 +2262,10 @@ border: 15px solid green;</textarea>
       <script type="text/template">
           ##Twitter Tweets
 
-          Embed a single Tweet by selecting the more option (`...`) to show the dropdown option from either the single tweet itself or from the timeline.
-
-          source: <!-- .element: class="footnote" --> https://twitter.com/learningcode/status/578997210643206145
+          Embed a single Tweet by clicking on the arrow in the top right and selecting 'Embed' from the dropdown option from either the single tweet itself, or from the profile.
 
           ![](framework/img/workshop/twitter-single.png)
+          ![](framework/img/workshop/twitter-profile.png)
 
       </script>
     </section>
@@ -2324,17 +2339,39 @@ border: 15px solid green;</textarea>
       <script type="text/template">
         ##Where to find API documentation
 
-        Many popular web services provide the raw data through their APIs as well for developers to create apps and other projects that require more than the embedding options.
+        Many popular web services provide the raw data through their APIs for developers to create apps and other projects that require more than the standard embedding options.
 
-        Often you can find links to the documentation from the service&#39;s web page.  For example, here&#39;s last.fm and Instagram.
+        Often you can find links to the documentation from the service&#39;s web page. For example, here&#39;s last.fm and Instagram.
 
         ![](framework/img/workshop/finding-apis-instagram.png)
 
         ![](framework/img/workshop/finding-apis-lastfm.png)
 
-        **Or** try searching for the name of the service + "API".
+        **Or** try searching in a search engine for the name of the service + "API".
 
         **Or** check out this list: [http://www.programmableweb.com/apis/directory/](http://www.programmableweb.com/apis/directory/1?protocol=REST)
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Today...
+
+        We learned a whole pile of things:
+
+        * intro to HTML
+        * intro to CSS
+        * Typography and how to use Webfonts
+        * intergrating content from 3rd party sources
+
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        # You did it!
+
+        ![I request the highest of fives](framework/img/workshop/high-five.gif)
       </script>
     </section>
 
@@ -2364,8 +2401,10 @@ border: 15px solid green;</textarea>
         1. Online tutorials:
           * http://learn.shayhowe.com/html-css/
           * https://www.codeschool.com/courses/front-end-foundations
-        1. http://www.htmlandcssbook.com
-        1. Try a few more Ladies Learning Code workshops. Check our roadmap for suggestions at [http://ladieslearningcode.com/roadmap](http://ladieslearningcode.com/roadmap)
+        1. Books:
+          * http://www.htmlandcssbook.com
+          * https://abookapart.com/products/html5-for-web-designers
+        1. Try a few more Ladies Learning Code workshops. Go to [canadalearningcode.ca](https://www.canadalearningcode.caa) and click on 'Learn'
       </script>
     </section>
 
@@ -2375,8 +2414,8 @@ border: 15px solid green;</textarea>
 
       You will need to register a domain name and purchase hosting. Here are some suggestions:
 
-      * [dreamhost.com](http://www.dreamhost.com/r.cgi?2085384) - domains and hosting - use promo code **LLC40** to get $40 off your registration!
-      * [hover.com](http://hover.com/ladiescode) - domains - save 10% with the promo code "learningcode"
+      * [dreamhost.com](http://www.dreamhost.com/r.cgi?2085384) - domains and hosting
+      * [hover.com](http://hover.com/ladiescode) - domains
 
       Why keep your domains and hosting separate?<!-- .element: class="note" --> [Learn more about Hover](http://ladieslearningcode.com/getting-hosted-domains-with-hover/).
 
